@@ -1,28 +1,28 @@
-# Pavankalyan Mathala  
-### **AI-Driven Full-Stack Developer | Java • Spring Boot • React • FastAPI**
+<h1 align="center">Pavankalyan Mathala</h1>
+<h3 align="center">AI-Driven Full-Stack Developer | Java • Spring Boot • React • FastAPI</h3>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=22&color=9ADCFF&center=true&vCenter=true&width=900&lines=Building+Scalable+Intelligent+Systems;AI+Enhanced+Full+Stack+Engineering;High+Performance+Backend+Developer;Cloud+Ready+%7C+Production+Focused+%7C+Impact+Driven" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=22&color=00E5FF&center=true&vCenter=true&width=900&lines=Building+Scalable+Intelligent+Systems;AI+Enhanced+Full+Stack+Engineering;High+Performance+Backend+Developer;Cloud+Ready+%7C+Production+Focused+%7C+Impact+Driven" />
 </p>
 
 ---
 
 ## About Me
 
-I’m an **AI-powered Full-Stack Developer** specialized in building **production-grade, scalable, and intelligent** web applications.  
-My work combines **Java + Spring Boot engineering** with **AI integrations** for automation, performance, and real-world impact.
+I’m an AI-powered Full-Stack Developer focused on building high-performance, scalable, and intelligent applications.  
+My expertise blends backend engineering (Java + Spring) with AI automation (Python + FastAPI) to create production-ready, impactful solutions.
 
- *Actively seeking Full-Stack / Backend / AI Developer roles*  
- *Open to Remote & Relocation*  
+Actively seeking Full-Stack / Backend / AI Developer roles.  
+Open to Remote & Relocation opportunities.
 
 ---
 
 ## Connect with Me
 
 <p align="center">
-  <a href="mailto:mathalapavankalyan@gmail.com"><img src="https://img.shields.io/badge/Email-111?style=for-the-badge&logo=gmail&logoColor=white"/></a>
-  <a href="https://www.linkedin.com/in/pavankalyan-mathala/"><img src="https://img.shields.io/badge/LinkedIn-111?style=for-the-badge&logo=linkedin&logoColor=0A66C2"/></a>
-  <a href="https://github.com/mathalapavankalyan"><img src="https://img.shields.io/badge/GitHub-111?style=for-the-badge&logo=github&logoColor=white"/></a>
+  <a href="mailto:mathalapavankalyan@gmail.com"><img src="https://img.shields.io/badge/Email-000?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+  <a href="https://www.linkedin.com/in/pavankalyan-mathala/"><img src="https://img.shields.io/badge/LinkedIn-000?style=for-the-badge&logo=linkedin&logoColor=0A66C2"/></a>
+  <a href="https://github.com/mathalapavankalyan"><img src="https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white"/></a>
 </p>
 
 ---
@@ -35,37 +35,37 @@ My work combines **Java + Spring Boot engineering** with **AI integrations** for
 
 ---
 
-#  Highlighted Projects
+# Featured Projects
 
-### **TakeIt — 7-Minute Hyperlocal Delivery System**  
+### TakeIt — 7-Minute Hyperlocal Delivery System  
 **Tech:** Java • Spring Boot • React • Redis  
-- Designed for **ultra-low-latency workflows**  
-- Real-time order tracking + optimized caching  
+- Ultra-low latency delivery workflow  
+- Real-time updates with caching  
 - Microservices-ready architecture  
 
 ---
 
-###  **MovieApp — Real-Time Movie Ticket Booking**  
+### MovieApp — Real-Time Movie Ticket Booking  
 **Tech:** React • Spring Boot • MySQL  
-- Smooth UI with **live seat selection**  
-- High-performance backend queries  
+- Live seat selection  
+- Optimized backend performance  
 - Transaction-safe booking flow  
 
 ---
 
-###  **AI Resume Formatter — JD-Aware Smart Resume Engine**  
+### AI Resume Formatter — JD-Aware Resume Engine  
 **Tech:** Python • FastAPI • NLP  
-- Auto-aligns resumes to JD skills  
+- Aligns resumes to job descriptions  
 - ATS-optimized bullet rewriting  
-- Keyword extraction + score prediction  
+- Keyword scoring system  
 
 ---
 
-# 🏆 Achievements
+# Achievements
 
-- 🥇 Two-time **Inter-College CodeHack Winner**  
-- 🥇 **Top Scorer – NPTEL Joy of Computing (2022)**  
-- 💡 Known for **high-impact problem solving & clean architectures**
+- Two-time Inter-College CodeHack Winner  
+- Top Scorer – NPTEL Joy of Computing (2022)  
+- Recognized for clean architecture and high-impact engineering  
 
 ---
 
@@ -78,7 +78,7 @@ My work combines **Java + Spring Boot engineering** with **AI integrations** for
 
 ---
 
-#  Languages
+# Most Used Languages
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mathalapavankalyan&layout=compact&theme=vision-friendly-dark"/>
@@ -87,5 +87,5 @@ My work combines **Java + Spring Boot engineering** with **AI integrations** for
 ---
 
 <p align="center">
-  ⭐ **If you find my work inspiring, feel free to star my repositories!**  
+  If you find my work valuable, please consider starring my repositories.  
 </p>
