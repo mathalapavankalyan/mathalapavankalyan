@@ -17,7 +17,7 @@ My work combines **Java + Spring Boot engineering** with **AI integrations** for
 
 ---
 
-## 🌐 Connect with Me
+## Connect with Me
 
 <p align="center">
   <a href="mailto:mathalapavankalyan@gmail.com"><img src="https://img.shields.io/badge/Email-111?style=for-the-badge&logo=gmail&logoColor=white"/></a>
@@ -27,7 +27,7 @@ My work combines **Java + Spring Boot engineering** with **AI integrations** for
 
 ---
 
-# ⚙️ Tech Stack
+# Tech Stack
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=java,spring,hibernate,maven,python,fastapi,cpp,react,html,css,javascript,nodejs,git,github,githubactions,jenkins,docker,aws" />
