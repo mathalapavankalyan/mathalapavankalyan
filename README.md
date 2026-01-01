@@ -100,8 +100,8 @@ Tech: Spring Boot • React • SQL
 # <span style="color:#DAA520;">GitHub Analytics</span>
 
 <p align="center">
-  <img height="160" src="https://github-readme-stats.vercel.app/api?username=mathalapavankalyan&show_icons=true&theme=great-gatsby"/>
-  <img height="160" src="https://github-readme-streak-stats.herokuapp.com/?user=mathalapavankalyan&theme=great-gatsby"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=mathalapavankalyan&show_icons=true&theme=tokyonight" height="160px" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=mathalapavankalyan&theme=tokyonight" height="160px" />
 </p>
 
 ---
@@ -109,7 +109,7 @@ Tech: Spring Boot • React • SQL
 # <span style="color:#DAA520;">Languages</span>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mathalapavankalyan&layout=compact&theme=great-gatsby"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mathalapavankalyan&layout=compact&theme=tokyonight"/>
 </p>
 
 ---
