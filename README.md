@@ -54,8 +54,7 @@ Open to roles in **Full-Stack Development, Backend Engineering, and AI Engineeri
 - Vector Stores (FAISS, Chroma)
 
 ### **Database & DevOps**
-- MySQL • PostgreSQL  
-- Redis • JWT  
+- SQL • MongoDB 
 - Docker • GitHub Actions  
 - Jenkins • AWS Basics  
 
@@ -76,7 +75,7 @@ Tech: LangGraph • LangChain • FastAPI
 ---
 
 ### <span style="color:#DAA520;">TakeIt — 7-Minute Hyperlocal Delivery Platform</span>  
-Tech: Java • Spring Boot • React • Redis  
+Tech: Java • Spring Boot • React
 - High-throughput backend  
 - Low-latency delivery orchestration  
 - End-to-end full-stack implementation  
