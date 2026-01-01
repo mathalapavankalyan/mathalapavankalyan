@@ -1,26 +1,30 @@
 <h1 align="center" style="color:#DAA520;">Pavankalyan Mathala</h1>
-<h3 align="center" style="color:#DAA520;">AI-Driven Full-Stack Developer | Java • Spring Boot • React • Agentic AI Systems</h3>
+<h3 align="center" style="color:#DAA520;">Full-Stack Developer (Java | Spring Boot | React) • Gen-AI & RAG Engineer</h3>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=22&color=DAA520&center=true&vCenter=true&width=900&lines=Building+Scalable+Intelligent+Systems;Agentic+AI+%7C+LangGraph+%7C+LangChain;Full+Stack+Engineering+for+Real+World+Impact;High+Performance+Backend+Developer" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=22&color=DAA520&center=true&vCenter=true&width=900&lines=Full-Stack+Java+%7C+Spring+Boot+%7C+React;Building+Production-Grade+Web+Applications;Agentic+AI+%7C+LangGraph+%7C+LangChain;RAG+Systems+%7C+AI-Driven+Workflows" />
 </p>
 
 ---
 
 ## <span style="color:#DAA520;">About Me</span>
 
-I’m a Full-Stack Developer specializing in **Agentic AI engineering** — building systems that think, plan, reason, and act using:
+I am a **Full-Stack Developer** specializing in building scalable and production-ready applications using:
 
-- LangGraph  
-- LangChain  
-- Multi-Agent Workflows  
-- Tool-use Agents  
-- RAG (Retrieval Augmented Generation)  
-- Context Orchestration
+- **Java, Spring Boot** for backend engineering  
+- **React** for modern, responsive front-end interfaces  
+- **SQL / Microservices / Distributed Systems**
 
-I combine **Java + Spring Boot backend engineering** with **Advanced Gen-AI frameworks** to build intelligent, scalable, production-ready applications.
+In addition to full-stack development, I also build **Gen-AI applications**, including:
 
-Open to roles in **AI Engineering, Full-Stack Development, Agent Framework Engineering, and Backend Development**.
+- Agentic AI systems  
+- LangGraph + LangChain based multi-agent workflows  
+- Retrieval-Augmented Generation (RAG) pipelines  
+- LLM-integrated full-stack applications  
+
+I combine **strong engineering foundations** with **modern AI tooling**, enabling me to deliver end-to-end systems that are intelligent, reliable, and user-focused.
+
+Open to roles in **Full-Stack Development, Backend Engineering, and AI Engineering**.
 
 ---
 
@@ -36,66 +40,61 @@ Open to roles in **AI Engineering, Full-Stack Development, Agent Framework Engin
 
 # <span style="color:#DAA520;">Tech Stack</span>
 
-### **Agentic AI & LLM Engineering**
+### **Core Full-Stack**
+- Java • Spring Boot  
+- React • JavaScript  
+- HTML • CSS  
+
+### **AI & Gen-AI Development**
 - LangGraph  
 - LangChain  
-- Agents & Tool-Calling  
-- RAG (Retrieval Augmentation)  
-- OpenAI / Anthropic / Gemini APIs  
+- RAG (Retrieval-Augmented Generation)  
+- Multi-Agent Systems  
+- LLM Tool-Usage • AI Workflows  
 - Vector Stores (FAISS, Chroma)
 
-### **Backend**
-- Java, Spring Boot  
-- Python, FastAPI  
-- Redis, MySQL, PostgreSQL  
-- REST APIs, Microservices  
-
-### **Frontend**
-- React, JavaScript, HTML, CSS  
-
-### **DevOps**
-- GitHub Actions, Jenkins  
-- Docker, AWS  
+### **Database & DevOps**
+- MySQL • PostgreSQL  
+- Redis • JWT  
+- Docker • GitHub Actions  
+- Jenkins • AWS Basics  
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=java,spring,python,fastapi,react,javascript,git,github,githubactions,jenkins,docker,aws&theme=dark" />
+  <img src="https://skillicons.dev/icons?i=java,spring,react,javascript,python,fastapi,mysql,postgresql,git,github,githubactions,jenkins,docker&theme=dark" />
 </p>
 
 ---
 
 # <span style="color:#DAA520;">Featured Projects</span>
 
-### <span style="color:#DAA520;">AI Resume Formatter — Agentic JD-Based Resume Engine</span>  
-**Tech:** LangChain • LangGraph • FastAPI  
-- Multi-step reasoning agent  
-- JD-aware rewriting using LLMs  
-- ATS optimization pipeline  
-- Skill extraction + scoring workflow  
+### <span style="color:#DAA520;">AI Resume Formatter — JD-Aligned Resume Engine</span>  
+Tech: LangGraph • LangChain • FastAPI  
+- Automated JD-awareness pipeline  
+- RAG-based skill extraction and alignment  
+- Multi-step reasoning agent for resume enhancement  
 
 ---
 
 ### <span style="color:#DAA520;">TakeIt — 7-Minute Hyperlocal Delivery Platform</span>  
-**Tech:** Java • Spring Boot • React • Redis  
-- High-performance backend  
-- Low-latency delivery pipeline  
-- Microservices-ready architecture  
-- Real-time updates with caching  
+Tech: Java • Spring Boot • React • Redis  
+- High-throughput backend  
+- Low-latency delivery orchestration  
+- End-to-end full-stack implementation  
 
 ---
 
 ### <span style="color:#DAA520;">MovieApp — Real-Time Movie Ticket Booking</span>  
-**Tech:** React • Spring Boot • MySQL  
-- Real-time seat selection  
-- Optimized backend queries  
-- Transaction-safe booking system  
+Tech: Spring Boot • React • SQL  
+- Real-time seat-locking logic  
+- Transaction-safe booking  
+- Smooth client interface built in React  
 
 ---
 
 # <span style="color:#DAA520;">Achievements</span>
 
 - Two-time Inter-College CodeHack Winner  
-- Top Scorer – NPTEL Joy of Computing (2022)  
-- Recognized for high-impact engineering
+- Top Scorer – NPTEL Joy of Computing  
 
 ---
 
@@ -117,5 +116,5 @@ Open to roles in **AI Engineering, Full-Stack Development, Agent Framework Engin
 ---
 
 <p align="center" style="color:#DAA520;">
-  If my work resonates with you, consider starring my repositories.
+  If my work aligns with what you’re looking for, feel free to explore and star my repositories.
 </p>
