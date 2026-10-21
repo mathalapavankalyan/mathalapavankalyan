@@ -1,151 +1,100 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="Pavankalyan Mathala: Backend and AI Engineer" width="100%">
+  <img src="assets/banner.svg" alt="Pavan Kalyan Mathala — Java Backend & Agentic AI Engineer" width="100%">
 </p>
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=17&duration=3000&pause=900&color=DAA520&center=true&vCenter=true&width=480&height=44&lines=Charged+twice%3F+Not+on+my+watch.;15s+to+2s+with+one+Redis+cache;Bulk+reports%3A+8+hrs+to+2+hrs;The+LLM+talks.+The+rules+decide.">
-    <img alt="Charged twice? Not on my watch. 15s to 2s with one Redis cache. Bulk reports: 8 hrs to 2 hrs. The LLM talks, the rules decide." src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=17&duration=3000&pause=900&color=9A7209&center=true&vCenter=true&width=480&height=44&lines=Charged+twice%3F+Not+on+my+watch.;15s+to+2s+with+one+Redis+cache;Bulk+reports%3A+8+hrs+to+2+hrs;The+LLM+talks.+The+rules+decide.">
-  </picture>
+  <strong>Java Backend Engineer · Spring Boot · AWS · Distributed Systems · Agentic AI</strong>
 </p>
 
 <p align="center">
-  <a href="#impact"><img src="assets/icons/zap.svg" height="16" align="absmiddle" alt=""> <b>Impact</b></a> &nbsp;·&nbsp;
-  <a href="#ai"><img src="assets/icons/cpu.svg" height="16" align="absmiddle" alt=""> <b>AI Work</b></a> &nbsp;·&nbsp;
-  <a href="#projects"><img src="assets/icons/code.svg" height="16" align="absmiddle" alt=""> <b>Projects</b></a> &nbsp;·&nbsp;
-  <a href="#stack"><img src="assets/icons/layers.svg" height="16" align="absmiddle" alt=""> <b>Stack</b></a> &nbsp;·&nbsp;
-  <a href="#contact"><img src="assets/icons/mail.svg" height="16" align="absmiddle" alt=""> <b>Contact</b></a>
+  <a href="https://www.linkedin.com/in/pavankalyan-mathala/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin" alt="LinkedIn"></a>
+  <a href="https://pavankalyan-portfolio-eight.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-Visit-111111?style=flat-square&logo=vercel" alt="Portfolio"></a>
+  <a href="mailto:mathalapavankalyan@gmail.com"><img src="https://img.shields.io/badge/Email-Contact-EA4335?style=flat-square&logo=gmail" alt="Email"></a>
+  <a href="https://leetcode.com/u/pavanmathala"><img src="https://img.shields.io/badge/LeetCode-Profile-FFA116?style=flat-square&logo=leetcode&logoColor=black" alt="LeetCode profile"></a>
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/OPEN_TO_WORK-Backend_%7C_AI_Engineer-DAA520?style=for-the-badge&labelColor=111111" alt="Open to work: Backend and AI Engineer"/>
-</p>
+About
+I'm a Java backend engineer with 2+ years of experience building backend services and exploring AI-powered applications across healthcare and payment-related use cases. I focus on reliable APIs, business-rule execution, performance, failure handling, and practical agentic AI.
 
----
+My core stack is Java 17, Spring Boot, SQL/NoSQL databases, and AWS. I also build AI workflows with RAG, LangGraph, tool calling, and MCP, with deterministic validation around decisions that require correctness.
+- Backend: API design, service-layer architecture, transactions, idempotency, concurrency, and testing
+- Cloud & delivery: AWS, Docker, GitHub Actions, and CI/CD
+- AI systems: Retrieval-augmented generation, tool orchestration, session memory, and deterministic lookups
+- Currently building: Backend projects that demonstrate reliability and AI systems that are useful, testable, and grounded in data
+Selected Impact
+Selected results from my work at Endava; details should be shared only where permitted.
+Result	Engineering work
+15s → 2s repeat plan evaluation	Added Redis caching keyed by plan ID and configuration to avoid recalculating identical requests
+~8 hrs → ~2 hrs for 10,000+ reports	Reworked report generation into batch processing and expanded output from PDF to PDF + Excel with multi-attachment email delivery
+15 → 6 min deployments; 88% JUnit coverage	Built per-Lambda GitHub Actions pipelines using OIDC and redeploying only changed Lambdas
+Clear terminal status for retry-exhausted work	Added SQS dead-letter handling that marks exhausted plan requests as FAILED instead of leaving them without a visible outcome
+50,000-plan catalog; 5–6k daily users	Delivered client-specific plan configuration features on a healthcare plan platform
 
-<h2><img src="assets/icons/user.svg" height="26" align="absmiddle" alt=""> About</h2>
 
-Java backend engineer with 2+ years in healthcare and fintech, based in Bengaluru. I make slow things fast, silent failures loud, and AI agents boring in the best way: the LLM understands the question, and deterministic rules make the decision.
+Experience
+Endava — Software Developer
+September 2025 – Present · Benefit Calculation Rules Platform
+- Worked on a serverless REST rules engine that replaced an Excel-based benefit-rules workflow.
+- Built API Gateway and AWS Lambda components for evaluating configured plan scenarios.
+- Worked with a team of seven on a platform evaluating approximately 8–10 scenarios per plan.
+- Explored and delivered GenAI and agentic AI proofs of concept alongside backend engineering work.
+Technologies: Java, Spring Boot, AWS Lambda, API Gateway, DynamoDB, Redis, GitHub Actions
+Endava — Associate Software Engineer
+August 2024 – September 2025 · Healthcare Plan Management Platform
+- Built a Kafka consumer in the rule service to apply business rules to plan events and validate them against configured constraints.
+- Contributed to backend services supporting healthcare plan management workflows.
+Technologies: Java, Spring Boot, Kafka, Redis
+Featured Projects
+Idempotent Payment Gateway
+A Java/Spring Boot payment gateway project focused on preventing duplicate payment processing when clients retry requests or requests race.
+- Accepts an Idempotency-Key and validates a request hash to reject reuse of a key with a different payload.
+- Uses a database uniqueness constraint as a concurrency safeguard.
+- Models order and payment states and uses transactional boundaries for state changes.
+- Includes tests for duplicate requests, key reuse, concurrency, and rollback scenarios.
+- Uses GitHub Actions and OpenID Connect (OIDC) for CI delivery to Amazon ECR.
+Stack: Java 17, Spring Boot, MySQL, Docker, GitHub Actions, AWS ECR
+Payment-Resolution Assistant
+A multilingual payment-issue assistant built for the Paytm Build for India AI Hackathon.
+- Uses LangGraph for intent understanding, tool selection, and session memory.
+- Uses deterministic search for payment lookups rather than relying on an LLM to invent transaction outcomes.
+- Streams investigation progress to a React interface using Server-Sent Events.
+- Built by a two-person team; the project was reported as a Top 20 entry among approximately 4,774 participants.
+Stack: Python, FastAPI, LangGraph, React
+Load Balancer
+A containerized setup demonstrating multiple Spring Boot instances behind an Nginx reverse proxy.
+- Runs three backend instances behind Nginx round-robin routing.
+- Shares a MySQL 8 database across instances.
+- Starts with Docker Compose.
+Stack: Java, Spring Boot, Nginx, Docker Compose, MySQL
+GenAI & Agentic AI
+Plan Recommendation Assistant — RAG, Knowledge Graph & MCP
+- Built a retrieval pipeline over approximately 100 policy and rules documents using OpenAI embeddings and Chroma.
+- Used a weighted knowledge graph in MongoDB with signals such as age, monthly premium, and plan type to rank relevant policies.
+- Exposed backend capabilities through FastAPI tools and MCP interfaces so the agent interacts through defined tool contracts rather than directly accessing underlying data sources.
+- Demonstrated the project to leadership and a client.
+AI-Native Workforce Management System
+Winner, APAC — OpenAI × Endava Codex Hackathon (55+ teams).
 
-**Looking for:** Backend Engineer and AI Engineer roles, ideally where Spring Boot, AWS, and agentic AI meet. I will treat your production database with the respect of a very nervous person.
+Designed a multi-agent workflow to recommend available candidates for opportunities based on role details. Built with Codex, React, Python, and FastAPI.
+Technical Skills
+Area	Technologies
+Languages	Java 17, Python, SQL
+Backend	Spring Boot, REST APIs, Hibernate/JPA, FastAPI, JUnit, Mockito
+AI & Agentic Systems	LangChain, LangGraph, RAG, OpenAI Embeddings, Chroma, knowledge graphs, MCP, tool calling
+Databases & Messaging	MySQL, Microsoft SQL Server, MongoDB, DynamoDB, Redis, Kafka, Amazon SQS
+Cloud & DevOps	AWS Lambda, API Gateway, S3, DynamoDB, ECR, Docker, Git, GitHub Actions, OIDC
 
-<a id="impact"></a>
 
-<h2><img src="assets/icons/zap.svg" height="26" align="absmiddle" alt=""> Impact</h2>
-
-*Numbers I'm allowed to brag about (all from my work at Endava).*
-
-| Result | How |
-|---|---|
-| **15s → 2s** repeat plan evaluation (~87% faster) | Redis cache keyed on plan ID and configuration, so identical requests skip recalculation |
-| **~8 hrs → ~2 hrs** for 10,000+ reports | Replaced one-at-a-time synchronous generation with batch processing, and extended reports from PDF-only to PDF + Excel with multi-attachment email delivery |
-| **15 → 6 min** deploys, 88% JUnit coverage | Per-Lambda GitHub Actions pipelines (OIDC, no stored AWS keys) that redeploy only the Lambdas that changed |
-| **Silent failures eliminated** in an SQS pipeline | Plans that exhausted their retries used to vanish with no status. Dead-letter-queue handling now marks them FAILED, so every request ends visibly |
-| **50,000-plan catalog**, 5-6k daily users | Built client-specific plan configuration features on a healthcare plan platform |
-
-<h3><img src="assets/icons/briefcase.svg" height="22" align="absmiddle" alt=""> Experience at Endava</h3>
-
-**Software Developer** · Sep 2025 – Present · *Benefit Calculation Rules Platform*
-Replaced an Excel-based benefit-rules tool (the spreadsheet did not put up a fight) with a serverless REST rules engine built with a team of 7, evaluating 8-10 scenarios per plan. I built its API Gateway + Lambda layer, and also shipped 5+ GenAI and agentic POCs (below).
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=java,spring,aws,dynamodb,redis,githubactions&theme=dark">
-  <img alt="Java, Spring Boot, AWS, DynamoDB, Redis, GitHub Actions" src="https://skillicons.dev/icons?i=java,spring,aws,dynamodb,redis,githubactions&theme=light">
-</picture>
-
-**Associate Software Engineer** · Aug 2024 – Sep 2025 · *Healthcare Plan Management Platform*
-Built the Kafka consumer in the rule service that applies business rules to every plan event and validates it against configured constraints.
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=java,spring,kafka,redis&theme=dark">
-  <img alt="Java, Spring Boot, Kafka, Redis" src="https://skillicons.dev/icons?i=java,spring,kafka,redis&theme=light">
-</picture>
-
-<a id="ai"></a>
-
-<h2><img src="assets/icons/cpu.svg" height="26" align="absmiddle" alt=""> GenAI &amp; Agentic AI</h2>
-
-### <img src="assets/icons/cpu.svg" height="22" align="absmiddle" alt=""> Plan Recommendation Assistant (RAG + Knowledge Graph + MCP)
-*"The LLM gets a tool menu, not the keys to the database."*
-
-- RAG pipeline over ~100 policy and rule documents (OpenAI Embeddings, Chroma, top-k retrieval), with retrieval relevance and recommendations validated against plan data.
-- Custom weighted knowledge graph in MongoDB: ranking signals (age, monthly premium, plan type) score each policy and steer the agent to the right documents.
-- FastAPI tools (DB fetch, RAG, summarize) exposed to the agent through MCP, so the LLM only sees tool interfaces and never the underlying data sources.
-- Demoed to leadership and a client.
-
-### <img src="assets/icons/users.svg" height="22" align="absmiddle" alt=""> AI-Native Workforce Management System
-**Winner, APAC, OpenAI × Endava Codex Hackathon (55+ teams).** I designed the multi-agent workflow that recommends available candidates matched to an opportunity's details. Built with Codex, React, Python, and FastAPI.
-
-### <img src="assets/icons/shield.svg" height="22" align="absmiddle" alt=""> [Payment-Resolution Assistant](https://github.com/mathalapavankalyan/paytm-resolve)
-**Top 20 of ~4,774 in the Paytm Build AI Hackathon** (team of 2). A LangGraph agent handles intent understanding, tool selection, and session memory, while deterministic search handles lookups, so money-critical answers are never left to the LLM. Progress streams to a React UI over Server-Sent Events, so users watch the investigation instead of a spinner.
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=python,fastapi,react&theme=dark">
-  <img alt="Python, FastAPI, React" src="https://skillicons.dev/icons?i=python,fastapi,react&theme=light">
-</picture>
-<img src="https://img.shields.io/badge/LangGraph-111111?style=for-the-badge&logo=langchain&logoColor=DAA520" alt="LangGraph" align="top">
-
-<a id="projects"></a>
-
-<h2><img src="assets/icons/code.svg" height="26" align="absmiddle" alt=""> Projects</h2>
-
-### <img src="assets/icons/shield.svg" height="22" align="absmiddle" alt=""> [Idempotent Payment Gateway](https://github.com/mathalapavankalyan/payment-gateway)
-*"Charged twice? Not on my watch."*
-
-**The problem:** Users double-tap Pay, networks drop, clients retry, and the customer should still be charged exactly once.
-**The fix:** Every request carries an `Idempotency-Key`, plus a hash of the payload, so reusing a key with a different amount gets rejected (a ₹500 key can't sneak in a ₹5000 payment). When two requests race, a database unique constraint is the final referee. Order and payment state machines run inside `@Transactional` boundaries, and tests cover duplicates, key reuse, concurrency, and rollback. CI builds the Docker image and pushes it to Amazon ECR through GitHub OIDC.
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=java,spring,mysql,docker,githubactions,aws&theme=dark">
-  <img alt="Java, Spring Boot, MySQL, Docker, GitHub Actions, AWS" src="https://skillicons.dev/icons?i=java,spring,mysql,docker,githubactions,aws&theme=light">
-</picture>
-
-<details>
-<summary><b>More: Load Balancer</b></summary>
-
-[**Load Balancer**](https://github.com/mathalapavankalyan/load-balancer): *3 servers, 1 Nginx, 0 drama.* Three Spring Boot instances behind Nginx round-robin, sharing one MySQL 8 database, started with a single `docker compose up`.
-
-</details>
-
-<a id="stack"></a>
-
-<h2><img src="assets/icons/layers.svg" height="26" align="absmiddle" alt=""> Stack</h2>
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=java,spring,python,fastapi,mysql,mongodb,redis,kafka,aws,docker,githubactions,git&theme=dark&perline=6">
-    <img alt="Java, Spring Boot, Python, FastAPI, MySQL, MongoDB, Redis, Kafka, AWS, Docker, GitHub Actions, Git" src="https://skillicons.dev/icons?i=java,spring,python,fastapi,mysql,mongodb,redis,kafka,aws,docker,githubactions,git&theme=light&perline=6">
-  </picture>
-</p>
-
-**Languages:** Java 17, Python, SQL
-**Backend:** Spring Boot, REST APIs, Hibernate/JPA, FastAPI, JUnit, Mockito
-**GenAI & Agentic AI:** LangChain, LangGraph, RAG (OpenAI Embeddings, Chroma), knowledge graphs, MCP, LLM tool calling
-**Data & Messaging:** MS SQL Server, MySQL, MongoDB, DynamoDB, Redis, Kafka, SQS
-**Cloud & DevOps:** AWS (Lambda, API Gateway, SQS, DynamoDB, S3, ECR), Docker, Git, GitHub Actions CI/CD (OIDC)
-
-<a id="contact"></a>
-
-<h2><img src="assets/icons/mail.svg" height="26" align="absmiddle" alt=""> Contact</h2>
-
-<a href="https://pavankalyan-portfolio-eight.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-111111?style=for-the-badge&logo=vercel&logoColor=DAA520" alt="Portfolio"></a>
-<a href="https://www.linkedin.com/in/pavankalyan-mathala/"><img src="https://img.shields.io/badge/LinkedIn-111111?style=for-the-badge&logo=linkedin&logoColor=DAA520" alt="LinkedIn"></a>
-<a href="mailto:mathalapavankalyan@gmail.com"><img src="https://img.shields.io/badge/Email-111111?style=for-the-badge&logo=gmail&logoColor=DAA520" alt="Email"></a>
-<a href="https://leetcode.com/u/pavanmathala"><img src="https://img.shields.io/badge/LeetCode_500%2B-111111?style=for-the-badge&logo=leetcode&logoColor=DAA520" alt="LeetCode, 500+ problems"></a>
-
-Fastest reply: email. Slowest: carrier pigeon.
-
-<details>
-<summary><img src="assets/icons/award.svg" height="18" align="absmiddle" alt=""> <b>Achievements &amp; education</b></summary>
-
+Achievements & Education
 - Winner, APAC: OpenAI × Endava Codex Hackathon (55+ teams)
-- Top 20 of ~4,774: Paytm Build AI Hackathon
-- Two-time Inter-College CodeHack winner (the second one wasn't a fluke)
-- Top scorer, NPTEL Joy of Computing
-- B.Tech, Computer Science, NRI Institute of Technology (CGPA 8.6/10), 2020 – 2024
-
-</details>
-
----
-
-<p align="center"><i>Star a repo and I'll say thanks exactly once, no matter how many times you click. It's idempotent.</i></p>
+- Top 20: Paytm Build for India AI Hackathon (approximately 4,774 participants, as reported)
+- Two-time winner: Inter-College CodeHack
+- Top scorer: NPTEL Joy of Computing
+- B.Tech in Computer Science: NRI Institute of Technology, 2020–2024 · CGPA 8.6/10
+Contact
+- Portfolio: https://pavankalyan-portfolio-eight.vercel.app/
+- LinkedIn: https://www.linkedin.com/in/pavankalyan-mathala/
+- Email: mathalapavankalyan@gmail.com
+- LeetCode: https://leetcode.com/u/pavanmathala
+<p align="center">
+  <em>I build backend systems that behave predictably under retries, failures, and real-world con
