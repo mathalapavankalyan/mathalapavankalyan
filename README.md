@@ -4,15 +4,15 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=17&duration=3000&pause=900&color=DAA520&center=true&vCenter=true&width=480&height=44&lines=Idempotent+payment+APIs+in+Spring+Boot;LangGraph+agents+grounded+in+real+data;React+UIs+that+stream+live+progress;Dockerized+services+shipped+to+AWS+ECR">
-    <img alt="Idempotent payment APIs, LangGraph agents, streaming React UIs, Dockerized services on AWS" src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=17&duration=3000&pause=900&color=9A7209&center=true&vCenter=true&width=480&height=44&lines=Idempotent+payment+APIs+in+Spring+Boot;LangGraph+agents+grounded+in+real+data;React+UIs+that+stream+live+progress;Dockerized+services+shipped+to+AWS+ECR">
+    <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=17&duration=3000&pause=900&color=DAA520&center=true&vCenter=true&width=480&height=44&lines=Charged+twice%3F+Not+on+my+watch.;Same+request%2C+10+retries%2C+1+payment;The+LLM+talks.+The+rules+decide.;3+Spring+Boot+servers%2C+1+Nginx%2C+0+drama">
+    <img alt="Charged twice? Not on my watch. Same request, 10 retries, 1 payment. The LLM talks, the rules decide." src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=17&duration=3000&pause=900&color=9A7209&center=true&vCenter=true&width=480&height=44&lines=Charged+twice%3F+Not+on+my+watch.;Same+request%2C+10+retries%2C+1+payment;The+LLM+talks.+The+rules+decide.;3+Spring+Boot+servers%2C+1+Nginx%2C+0+drama">
   </picture>
 </p>
 
 <p align="center">
-  <a href="#projects"><code>📂 Projects</code></a> &nbsp;·&nbsp;
-  <a href="#stack"><code>🧰 Stack</code></a> &nbsp;·&nbsp;
-  <a href="#contact"><code>📬 Contact</code></a>
+  <a href="#projects"><img src="assets/icons/code.svg" height="16" align="absmiddle" alt=""> <b>Projects</b></a> &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="#stack"><img src="assets/icons/layers.svg" height="16" align="absmiddle" alt=""> <b>Stack</b></a> &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="#contact"><img src="assets/icons/mail.svg" height="16" align="absmiddle" alt=""> <b>Contact</b></a>
 </p>
 
 <p align="center">
@@ -21,38 +21,54 @@
 
 ---
 
-## 👋 About
+<h2><img src="assets/icons/user.svg" height="26" align="absmiddle" alt=""> About</h2>
 
-I build backend systems where correctness matters: payments, retries, concurrency, and scaling across instances.
-I work in Java/Spring Boot with React frontends, and I build LLM agent workflows (LangGraph, FastAPI) that stay grounded in deterministic business rules.
+I build backends that survive retries, race conditions, and users mashing the Pay button twice.
+Java and Spring Boot for the serious parts, React for the pretty parts, and LangGraph for when an LLM needs to be useful without being trusted near the money.
 
-**Looking for:** entry-level Backend, Full-Stack, or AI Engineering roles.
+**Looking for:** entry-level Backend, Full-Stack, or AI Engineering roles. I will treat your production database with the respect of a very nervous person.
 
 <a id="projects"></a>
 
-## 📂 Projects
+<h2><img src="assets/icons/code.svg" height="26" align="absmiddle" alt=""> Projects</h2>
 
-### 💳 [Payment Gateway](https://github.com/mathalapavankalyan/payment-gateway)
-**Problem:** A client retry or a concurrent request must never create a duplicate payment.
-**What I built:** A payment backend where every request carries an `Idempotency-Key`, and a hash of the payload catches the same key being reused for a different request. A database unique constraint is the final guard against races, and payment creation runs inside one transaction. CI runs tests, builds the Docker image, and pushes it to Amazon ECR using GitHub OIDC (no long-lived AWS keys) and a least-privilege IAM role.
+### <img src="assets/icons/shield.svg" height="22" align="absmiddle" alt=""> [Payment Gateway](https://github.com/mathalapavankalyan/payment-gateway)
+*"Charged twice? Not on my watch."*
 
-`Java 17` `Spring Boot` `MySQL` `JPA/Hibernate` `Docker` `GitHub Actions` `AWS ECR`
+**The problem:** Users double-tap Pay, networks drop, clients retry, and the customer should still be charged exactly once.
+**The fix:** Every request carries an `Idempotency-Key`, plus a hash of the payload, so reusing a key with a different amount gets rejected (a ₹500 key can't sneak in a ₹5000 payment). When two requests race, a database unique constraint is the final referee, and payment creation runs in a single transaction. CI runs the tests, builds the Docker image, and pushes it to Amazon ECR through GitHub OIDC: no long-lived AWS keys, least-privilege IAM role.
 
-### 🤖 [Paytm Payment Resolution Assistant](https://github.com/mathalapavankalyan/paytm-resolve)
-**Problem:** Payment support questions ("payment failed but money was deducted") need an investigation, not a generic chatbot reply.
-**What I built:** A four-stage LangGraph pipeline (understand → investigate → resolve → respond) that turns a message into structured intent, looks up transaction, refund, and policy records, and applies deterministic resolution rules. Progress streams to a React UI over Server-Sent Events.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=java,spring,mysql,docker,githubactions,aws&theme=dark">
+  <img alt="Java, Spring Boot, MySQL, Docker, GitHub Actions, AWS" src="https://skillicons.dev/icons?i=java,spring,mysql,docker,githubactions,aws&theme=light">
+</picture>
 
-`React` `Vite` `FastAPI` `LangGraph` `Pydantic` `SSE`
+### <img src="assets/icons/cpu.svg" height="22" align="absmiddle" alt=""> [Paytm Payment Resolution Assistant](https://github.com/mathalapavankalyan/paytm-resolve)
+*"The LLM talks. The rules decide."*
 
-### ⚖️ [Load Balancer](https://github.com/mathalapavankalyan/load-balancer)
-**Problem:** Show how one service scales horizontally behind a single entry point.
-**What I built:** Three Spring Boot instances behind Nginx (round-robin) sharing one MySQL 8 database, orchestrated with Docker Compose.
+**The problem:** "Payment failed but money was deducted" is five words and one very stressed user, and a generic chatbot reply doesn't help.
+**The fix:** A four-stage LangGraph pipeline (understand → investigate → resolve → respond) that turns the message into structured intent, looks up the transaction, refund, and policy records, and applies deterministic resolution rules. The model understands language; it doesn't get to improvise a refund. Progress streams to a React UI over Server-Sent Events, so users watch the investigation instead of staring at a spinner.
 
-`Spring Boot` `Nginx` `MySQL` `Docker Compose`
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=react,vite,python,fastapi&theme=dark">
+  <img alt="React, Vite, Python, FastAPI" src="https://skillicons.dev/icons?i=react,vite,python,fastapi&theme=light">
+</picture>
+<img src="https://img.shields.io/badge/LangGraph-111111?style=for-the-badge&logo=langchain&logoColor=DAA520" alt="LangGraph" align="top">
+
+### <img src="assets/icons/share.svg" height="22" align="absmiddle" alt=""> [Load Balancer](https://github.com/mathalapavankalyan/load-balancer)
+*"3 servers, 1 Nginx, 0 drama."*
+
+**The problem:** One server shouldn't have to carry the whole crowd.
+**The fix:** Three Spring Boot instances behind Nginx doing round-robin, all sharing one MySQL 8 database, started with a single `docker compose up`.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=java,spring,nginx,mysql,docker&theme=dark">
+  <img alt="Java, Spring Boot, Nginx, MySQL, Docker" src="https://skillicons.dev/icons?i=java,spring,nginx,mysql,docker&theme=light">
+</picture>
 
 <a id="stack"></a>
 
-## 🧰 Stack
+<h2><img src="assets/icons/layers.svg" height="26" align="absmiddle" alt=""> Stack</h2>
 
 <p align="center">
   <picture>
@@ -61,31 +77,32 @@ I work in Java/Spring Boot with React frontends, and I build LLM agent workflows
   </picture>
 </p>
 
-**Backend:** `Java` `Spring Boot` `JPA` `FastAPI` · **Frontend:** `React` `JavaScript`
-**AI:** `LangGraph` `LangChain` · **Data:** `MySQL` `MongoDB`
-**DevOps:** `Docker` `Nginx` `GitHub Actions` `AWS ECR/IAM`
+**Backend:** Java, Spring Boot, Spring Data JPA, FastAPI · **Frontend:** React, JavaScript
+**AI:** LangGraph, LangChain · **Data:** MySQL, MongoDB
+**DevOps:** Docker, Nginx, GitHub Actions, AWS (ECR, IAM)
 
-## 🔭 Currently
+<h2><img src="assets/icons/compass.svg" height="26" align="absmiddle" alt=""> Currently</h2>
 
-- 🔨 Building: [CURRENT_PROJECT]
-- 📚 Learning: [e.g. Redis, Kafka, system design]
+- **Next on my own roadmap:** Redis, Kafka, Terraform. My Payment Gateway README lists them under "production hardening," so I'm basically legally obligated.
 
 <a id="contact"></a>
 
-## 📬 Contact
+<h2><img src="assets/icons/mail.svg" height="26" align="absmiddle" alt=""> Contact</h2>
 
-<a href="https://pavankalyan-portfolio-eight.vercel.app/"><code>🌐 Portfolio</code></a> &nbsp;·&nbsp;
-<a href="https://www.linkedin.com/in/pavankalyan-mathala/"><code>💼 LinkedIn</code></a> &nbsp;·&nbsp;
-<a href="mailto:mathalapavankalyan@gmail.com"><code>✉️ Email</code></a>
+<a href="https://pavankalyan-portfolio-eight.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-111111?style=for-the-badge&logo=vercel&logoColor=DAA520" alt="Portfolio"></a>
+<a href="https://www.linkedin.com/in/pavankalyan-mathala/"><img src="https://img.shields.io/badge/LinkedIn-111111?style=for-the-badge&logo=linkedin&logoColor=DAA520" alt="LinkedIn"></a>
+<a href="mailto:mathalapavankalyan@gmail.com"><img src="https://img.shields.io/badge/Email-111111?style=for-the-badge&logo=gmail&logoColor=DAA520" alt="Email"></a>
+
+Fastest reply: email. Slowest: carrier pigeon.
 
 <details>
-<summary><b>🏆 Achievements</b></summary>
+<summary><img src="assets/icons/award.svg" height="18" align="absmiddle" alt=""> <b>Achievements</b></summary>
 
-- Two-time Inter-College CodeHack winner
+- Two-time Inter-College CodeHack winner (the second one wasn't a fluke)
 - Top scorer, NPTEL Joy of Computing
 
 </details>
 
 ---
 
-<p align="center"><i>If my work fits what you're looking for, let's talk. Stars on the repos are always appreciated ⭐</i></p>
+<p align="center"><i>Star a repo and I'll say thanks exactly once, no matter how many times you click. It's idempotent.</i></p>
