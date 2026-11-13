@@ -1,4 +1,3 @@
-<!-- Header banner -->
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:DAA520,100:0d1117&height=190&section=header&text=Pavankalyan%20Mathala&fontSize=44&fontColor=ffffff&fontAlignY=38&desc=Backend%20Engineer%20%C2%B7%20Agentic%20AI%20%C2%B7%20RAG&descSize=18&descAlignY=60" alt="Pavankalyan Mathala" />
 </p>
@@ -18,39 +17,51 @@
 
 ## 👋 About
 
-I'm a **Java backend engineer with 2+ years** across healthcare and payments, building systems that stay correct under retries, concurrency and failure. On top of that foundation I build **agentic AI and RAG applications**.
+I'm a **software engineer with 2+ years of experience**, working in **Java/Spring Boot and Python/FastAPI** on healthcare insurance platforms, and building payment systems in my own projects. I started in backend engineering, then moved into **agentic AI and RAG** in Sep 2025. I build the parts that make a product trustworthy: APIs, queues, caches and pipelines that stay correct under retries, concurrency and failure.
 
 > **My rule for AI in production:** the LLM understands the question, and deterministic rules make the decision.
 
-I would rather ship a system that behaves predictably under retries, failures and real traffic than one that only looks good in a demo.
+I would rather ship a system that behaves predictably under real traffic than one that only looks good in a demo.
 
-**Open to:** Backend Engineering and AI Engineering roles · Bengaluru or remote
+**Open to:** Backend Engineering and AI Engineering roles at product companies and startups.
 
 ---
 
-## 📈 Impact at a glance
+## ⭐ Highlights
 
-| Result | What I did |
+| | |
 |:--|:--|
-| **15s → 2s** | Cached repeat plan evaluations in Redis, shared across services |
-| **~8 hrs → ~2 hrs** | Batch processing for 10,000+ report generation |
-| **~100 documents** | RAG over policy documents with OpenAI embeddings and Chroma, steered by a weighted knowledge graph in MongoDB |
-| **0 stored cloud keys** | CI/CD to AWS through GitHub OIDC instead of long-lived credentials |
+| 🥇 **Winner, APAC** | OpenAI × Endava Codex Hackathon, 55+ teams, with LangGraph and LangChain multi-agent workflows |
+| 🏅 **Top 20 of ~4,774** | Paytm Build for India AI Hackathon (team of 2) |
+| ⚡ **15s → 2s** | API response time, by caching repeat plan evaluations in a shared Redis layer |
+| 📦 **~8 hrs → ~2 hrs** | Batch processing for 10,000+ report generation |
+
+---
+
+## 💼 What I build at work
+
+- **Cost-calculation platform for health plans:** 15+ APIs in Java/Spring Boot and Python/FastAPI on AWS Lambda and DynamoDB, with SQS and a DLQ to absorb traffic spikes.
+- **Event-driven microservices:** Kafka-based bulk plan creation and updates, with scheduled PDF and Excel exports.
+- **Agentic AI for claims and policies:** LangGraph agents that check claim status, handle resubmissions and recommend policies, with PHI kept out of prompts and logs.
+- **RAG over ~100 policy documents** using OpenAI embeddings and Chroma, steered by a weighted knowledge graph in MongoDB.
+- **MCP tool servers on FastAPI**, so the LLM sees tool interfaces and never the underlying data sources.
+- **CI/CD across 5 environments**, plus regression-test scripts.
 
 ---
 
 ## 🛠️ Tech stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=java,spring,python,fastapi,mysql,mongodb,redis,kafka,aws,docker,githubactions,git&perline=12" alt="Tech stack icons" />
+  <img src="https://skillicons.dev/icons?i=java,spring,python,fastapi,react,mysql,mongodb,redis,kafka,aws,docker,terraform,githubactions,git&perline=14" alt="Tech stack icons" />
 </p>
 
 | Area | Tools |
 |:--|:--|
-| **Backend** | Java 17, Spring Boot, Hibernate/JPA, REST APIs, JUnit, Mockito, Python, FastAPI |
+| **Backend** | Java 17, Spring Boot, Hibernate/JPA, REST APIs, microservices, design patterns, JUnit, Mockito, Python, FastAPI, React |
 | **Data and messaging** | MySQL, MongoDB, DynamoDB, Redis, Kafka, Amazon SQS |
-| **Cloud and DevOps** | AWS (Lambda, API Gateway, S3, ECR), Docker, GitHub Actions (OIDC), Terraform |
-| **AI** | LangGraph, LangChain, RAG (OpenAI embeddings, Chroma), knowledge graphs, MCP, LLM tool-calling, multi-agent workflows |
+| **Cloud and DevOps** | AWS (Lambda, API Gateway, S3, ECR, IAM), Terraform, Docker, GitHub Actions (OIDC), Jenkins |
+| **AI** | LangGraph, LangChain, LangSmith, RAG, OpenAI embeddings, Chroma, knowledge graphs, MCP, tool-calling, multi-agent workflows, Pydantic, evals, guardrails |
+| **Learning now** | System design and distributed systems |
 
 ---
 
@@ -59,8 +70,6 @@ I would rather ship a system that behaves predictably under retries, failures an
 ### [Idempotent Payment Gateway](https://github.com/mathalapavankalyan/payment-gateway): charged twice? Not on my watch
 
 `Java 17` `Spring Boot` `MySQL` `Docker` `GitHub Actions` `AWS ECR`
-
-A payment backend built around one question: what happens when a client retries?
 
 - Every request carries an `Idempotency-Key` plus a hash of the payload. Retries return the original result, and a reused key with a different amount is rejected.
 - A database unique constraint closes the check-then-insert race. Order and payment state machines run inside `@Transactional` boundaries, with tests for duplicates, key reuse, concurrency and rollback.
@@ -79,11 +88,11 @@ flowchart LR
 
 ### [Payment-Resolution Assistant](https://github.com/mathalapavankalyan/paytm-resolve): an agent that investigates before it talks
 
-`Python` `FastAPI` `LangGraph` `React`
+`Python` `FastAPI` `LangGraph` `Pydantic` `React`
 
 - A four-stage LangGraph pipeline with session memory. The LLM reads the message, while deterministic search and rules decide the outcome.
 - Investigation progress streams to a React UI over Server-Sent Events, so users watch each step instead of a spinner.
-- **Top 20 of ~4,774** in the Paytm Build for India AI Hackathon (team of 2).
+- **Top 20 of ~4,774** in the Paytm Build for India AI Hackathon.
 
 ```mermaid
 flowchart LR
@@ -102,22 +111,20 @@ flowchart LR
 
 ---
 
-## 🏆 Achievements
+### More projects
 
-- 🥇 **Winner, APAC:** OpenAI × Endava Codex Hackathon (55+ teams)
-- 🏅 **Top 20 of ~4,774:** Paytm Build for India AI Hackathon
-- 🥇 Two-time Inter-College CodeHack winner
-- 📚 Top scorer, NPTEL Joy of Computing
-- 💻 500+ problems solved on LeetCode, with a 500-day badge
+| Project | What it is |
+|:--|:--|
+| [IngestFlow](https://github.com/mathalapavankalyan/IngestFlow) | Serverless data-ingestion API on FastAPI, AWS Lambda and DynamoDB, with a layered API → service → processor → storage design |
+| [AI Resume Formatter](https://github.com/mathalapavankalyan/resume_formatter) | JD-aligned resume engine built with LangGraph, LangChain and FastAPI |
 
 ---
 
-## 📊 GitHub stats
+## 🏆 Also
 
-<p align="center">
-  <img height="160" src="https://github-readme-stats.vercel.app/api?username=mathalapavankalyan&show_icons=true&hide_border=true&bg_color=0d1117&title_color=DAA520&icon_color=DAA520&text_color=c9d1d9" alt="GitHub stats" />
-  <img height="160" src="https://streak-stats.demolab.com/?user=mathalapavankalyan&hide_border=true&background=0d1117&ring=DAA520&fire=DAA520&currStreakLabel=DAA520&currStreakNum=c9d1d9&sideNums=c9d1d9&sideLabels=c9d1d9&dates=8b949e" alt="GitHub streak" />
-</p>
+- 🥇 Two-time Inter-College CodeHack winner
+- 📚 Top scorer, NPTEL Joy of Computing
+- 💻 500+ problems solved on LeetCode, with a 500-day badge
 
 ---
 
